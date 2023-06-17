@@ -1,13 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-image: url("./assets/close-up-of-asian-female-eyes-look-black-and-white-manga-style-japanese-cartoon-comic-concept-anime-characters-hand-drawn-trendy-vector-seamless-pattern-background-wallpaper-700-204032842.jpg");
+  background-size: 551px;
+  background-clip: border-box;
+  background-repeat: repeat;
+  height: 100vh;
+  animation: anime 120s infinite linear;
+}
+#getKeyForm:has(#apiKeyGuide:hover) > #guide {
+  display: block !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#guide {
+  display: none;
+  position: absolute;
+}
+.fade {
+  opacity: 0;
+  animation: fade 3s ease-in forwards;
+}
+@keyframes anime {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: -500% 0%;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 70%;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
